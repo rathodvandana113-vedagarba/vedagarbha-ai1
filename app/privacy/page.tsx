@@ -131,6 +131,14 @@ export default function PrivacyPage() {
               <h3 className="text-white font-bold mb-3">8. Children's Privacy</h3>
               <p className="text-sm">Vedagarbha is not intended for users under 13 years old. we do not knowingly collect data from children.</p>
             </section>
+            <section>
+              <h3 className="text-white font-bold mb-3">9. Policy Updates</h3>
+              <p className="text-sm">We may update this policy periodically. Your continued use of the platform after changes constitutes acceptance of the new terms.</p>
+            </section>
+            <section>
+              <h3 className="text-white font-bold mb-3">10. AI Training Disclosure</h3>
+              <p className="text-sm">Generated outputs may be used in an aggregated, de-identified manner to improve the quality of our underlying AI models and services.</p>
+            </section>
           </div>
 
           <div className="p-8 rounded-2xl bg-gradient-to-br from-[#121218] to-[#0A0A0B] border border-[#D4AF37]/20 relative overflow-hidden group">

@@ -93,6 +93,10 @@ export default function HomePage() {
               <p className="text-lg md:text-xl text-[#A1A1A6] max-w-[500px] leading-relaxed mx-auto lg:mx-0">
                 Create hyper-realistic videos, images, and voice using AI. The ultimate creative ecosystem inside your browser.
               </p>
+              <div className="flex items-center gap-2 justify-center lg:justify-start">
+                <span className="text-[10px] font-bold text-[#A1A1A6] uppercase tracking-[0.2em]">Powered by</span>
+                <span className="text-[10px] font-black text-[#D4AF37] uppercase tracking-[0.2em] px-2 py-0.5 bg-[#D4AF37]/10 rounded border border-[#D4AF37]/20 shadow-[0_0_10px_rgba(212,175,55,0.1)]">webcraft-Ai</span>
+              </div>
               <div className="flex flex-col gap-4 mt-4 justify-center lg:justify-start sm:flex-row px-4 sm:px-0">
                 <button 
                   onClick={() => handleStart("/generate/text-to-video")}
@@ -294,9 +298,13 @@ export default function HomePage() {
               </div>
               <span className="text-xl font-bold tracking-tight text-white">Vedagarbha</span>
             </div>
-            <p className="text-[#6E6E73] text-sm leading-relaxed">
+            <p className="text-[#6E6E73] text-sm leading-relaxed mb-1">
               The premier SaaS platform for hyper-realistic AI video, image, and speech generation. Unleash your creativity inside the browser.
             </p>
+            <div className="flex items-center gap-2 mt-auto">
+              <span className="text-[9px] font-bold text-[#6E6E73] uppercase tracking-[0.1em]">Crafted with passion by</span>
+              <span className="text-[9px] font-black text-[#D4AF37] uppercase tracking-[0.1em]">webcraft-Ai</span>
+            </div>
           </div>
           
           <div>

@@ -120,6 +120,10 @@ export default function TermsPage() {
                   <h3 className="text-white font-bold mb-2">10. Changes to Terms</h3>
                   <p className="text-sm">We may update these terms periodically. Your continued use of the site constitutes acceptance of updated terms.</p>
                 </div>
+                <div>
+                  <h3 className="text-white font-bold mb-2">11. Governing Law</h3>
+                  <p className="text-sm">These terms are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts in Mumbai.</p>
+                </div>
              </div>
           </div>
 
