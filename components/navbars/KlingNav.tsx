@@ -29,14 +29,20 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 h-[72px] bg-[#0A0A0B]/90 backdrop-blur-2xl border-b border-white/10 z-[1000] flex items-center">
       <div className="w-full max-w-[1440px] mx-auto px-4 md:px-8 flex justify-between items-center h-full">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 shrink-0 z-[1001]">
-          <div className="w-8 h-8 rounded-[10px] bg-gradient-to-br from-[#D4AF37] to-[#F5D97A] shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center">
-            <span className="text-black font-black text-sm">V</span>
+        <div className="flex items-center gap-6 shrink-0 z-[1001]">
+          <Link href="/" className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-[10px] bg-gradient-to-br from-[#D4AF37] to-[#F5D97A] shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center">
+              <span className="text-black font-black text-sm">V</span>
+            </div>
+            <span className="text-xl md:text-2xl font-black tracking-tight text-white">
+              Vedagarbha
+            </span>
+          </Link>
+          <div className="hidden sm:flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">
+             <span className="text-[9px] font-bold text-[#6E6E73] uppercase tracking-[0.2em]">Partner</span>
+             <span className="text-[9px] font-black text-[#D4AF37] uppercase tracking-[0.2em]">webcraft-Ai</span>
           </div>
-          <span className="text-xl md:text-2xl font-black tracking-tight text-white">
-            Vedagarbha
-          </span>
-        </Link>
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="desktop-nav items-center gap-10">
