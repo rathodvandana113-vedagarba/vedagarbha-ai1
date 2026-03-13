@@ -1,0 +1,8 @@
+# Railway config – use npm (this repo is not a pnpm monorepo).
+# Overrides dashboard "Custom Build Command" so the build succeeds.
+
+[build]
+buildCommand = "npm ci && npm run build"
+
+[deploy]
+startCommand = "npm run start"
