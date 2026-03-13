@@ -160,23 +160,25 @@ export default function PricingPage() {
             <h1 className="text-5xl md:text-[56px] font-extrabold tracking-tight">Simple, Transparent Pricing</h1>
             <p className="text-lg text-[#A1A1A6] max-w-[600px]">Pay only for what you generate. Buy credit packs that never expire.</p>
             
-            <div className="bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-[#D4AF37] px-6 py-3 rounded-xl mt-6">
+            <div className="bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-[#D4AF37] px-6 py-3 rounded-xl mt-6 text-sm md:text-base">
               Students get 25% OFF on all AI credits. Verify your student status to unlock the discount.
             </div>
 
-            <div className="flex items-center gap-4 bg-[#121218]/80 backdrop-blur-xl px-6 py-3 rounded-full border border-white/5 mt-4 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
-              <span className={`text-[15px] transition-colors duration-300 ${!isStudent ? 'text-white font-semibold' : 'text-[#6E6E73] font-medium'}`}>Regular User</span>
-              
-              <div 
-                className={`w-14 h-8 bg-[#1C1C1F] rounded-full border border-white/10 relative cursor-pointer transition-all duration-300 ${(!user || user.studentStatus !== 'verified') ? 'opacity-50' : ''}`}
-                onClick={handleStudentToggle}
-              >
-                <div className={`absolute top-[2px] left-[2px] w-[26px] h-[26px] rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.8)] transition-all duration-300 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] ${isStudent ? 'translate-x-6 bg-[#D4AF37]' : 'bg-[#A1A1A6]'}`}></div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 bg-[#121218]/80 backdrop-blur-xl px-4 sm:px-6 py-4 sm:py-3 rounded-2xl sm:rounded-full border border-white/5 mt-4 shadow-[0_4px_20px_rgba(0,0,0,0.5)] w-full sm:w-auto">
+              <div className="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-start">
+                <span className={`text-[14px] sm:text-[15px] transition-colors duration-300 ${!isStudent ? 'text-white font-semibold' : 'text-[#6E6E73] font-medium'}`}>Regular User</span>
+                
+                <div 
+                  className={`w-14 h-8 bg-[#1C1C1F] rounded-full border border-white/10 relative cursor-pointer transition-all duration-300 ${(!user || user.studentStatus !== 'verified') ? 'opacity-50' : ''}`}
+                  onClick={handleStudentToggle}
+                >
+                  <div className={`absolute top-[2px] left-[2px] w-[26px] h-[26px] rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.8)] transition-all duration-300 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] flex items-center justify-center ${isStudent ? 'translate-x-6 bg-[#D4AF37]' : 'bg-[#A1A1A6]'}`}></div>
+                </div>
               </div>
               
-              <span className={`text-[15px] transition-colors duration-300 flex items-center gap-2 ${isStudent ? 'text-white font-semibold' : 'text-[#6E6E73] font-medium'}`}>
+              <span className={`text-[14px] sm:text-[15px] transition-colors duration-300 flex items-center gap-2 ${isStudent ? 'text-white font-semibold' : 'text-[#6E6E73] font-medium'}`}>
                 Verified Student 
-                <span className="bg-[#D4AF37]/15 text-[#D4AF37] px-2 py-1 rounded-[4px] text-[11px] font-bold uppercase tracking-wider border border-[#D4AF37]/20">Save 25%</span>
+                <span className="bg-[#D4AF37]/15 text-[#D4AF37] px-2 py-1 rounded-[4px] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider border border-[#D4AF37]/20 whitespace-nowrap">Save 25%</span>
               </span>
             </div>
           </header>
@@ -186,7 +188,7 @@ export default function PricingPage() {
             <div className="p-8 md:p-12 flex flex-col gap-8">
               <h2 className="text-2xl font-semibold text-center">Select Credit Pack</h2>
               
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {[100, 200, 300, 500, 850, 1299].map(amount => (
                   <button 
                     key={amount}

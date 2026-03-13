@@ -206,33 +206,33 @@ function GeneratePageContent({ type }: { type: string }) {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-[#0B0B0F] text-white font-sans overflow-x-hidden">
+    <div className="flex flex-col h-[100dvh] bg-[#0B0B0F] text-white font-sans overflow-x-hidden">
       <Navbar />
       
-      <div className="flex flex-col lg:flex-row flex-1 mt-[72px] w-full overflow-hidden">
-        <aside className="w-full lg:w-[300px] shrink-0 bg-[#121218]/80 backdrop-blur-xl lg:border-r border-b lg:border-b-0 border-white/5 flex flex-col p-4 md:p-6 overflow-y-auto max-h-[40vh] lg:max-h-full">
-          <div className="flex flex-col gap-6">
-            <h3 className="text-sm uppercase text-[#6E6E73] tracking-widest font-semibold">Settings</h3>
+      <div className="flex flex-col-reverse lg:flex-row flex-1 pt-[72px] w-full overflow-hidden">
+        <aside className="w-full lg:w-[320px] shrink-0 bg-[#0B0B0F] lg:bg-[#121218]/80 backdrop-blur-xl lg:border-r border-t lg:border-t-0 border-white/5 flex flex-col p-4 md:p-6 overflow-y-auto">
+          <div className="flex flex-col gap-6 pb-20 lg:pb-0">
+            <h3 className="text-sm uppercase text-[#6E6E73] tracking-widest font-semibold hidden lg:block">Settings</h3>
             
             <div className="flex flex-col gap-3">
               <label className="text-[13px] text-[#A1A1A6] font-medium">Aspect Ratio</label>
               <div className="grid grid-cols-3 gap-2">
-                <button onClick={() => setAspectRatio("16:9")} className={`py-2 md:py-3 rounded-lg text-xs font-semibold transition-all ${aspectRatio === "16:9" ? "bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37]" : "bg-[#0B0B0F] border border-white/5 text-white hover:bg-white/[0.04]"}`}>16:9</button>
-                <button onClick={() => setAspectRatio("9:16")} className={`py-2 md:py-3 rounded-lg text-xs font-semibold transition-all ${aspectRatio === "9:16" ? "bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37]" : "bg-[#0B0B0F] border border-white/5 text-white hover:bg-white/[0.04]"}`}>9:16</button>
-                <button onClick={() => setAspectRatio("1:1")} className={`py-2 md:py-3 rounded-lg text-xs font-semibold transition-all ${aspectRatio === "1:1" ? "bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37]" : "bg-[#0B0B0F] border border-white/5 text-white hover:bg-white/[0.04]"}`}>1:1</button>
+                <button onClick={() => setAspectRatio("16:9")} className={`py-2 md:py-3 rounded-lg text-xs font-semibold transition-all ${aspectRatio === "16:9" ? "bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37]" : "bg-[#121218] border border-white/5 text-white hover:bg-white/[0.04]"}`}>16:9</button>
+                <button onClick={() => setAspectRatio("9:16")} className={`py-2 md:py-3 rounded-lg text-xs font-semibold transition-all ${aspectRatio === "9:16" ? "bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37]" : "bg-[#121218] border border-white/5 text-white hover:bg-white/[0.04]"}`}>9:16</button>
+                <button onClick={() => setAspectRatio("1:1")} className={`py-2 md:py-3 rounded-lg text-xs font-semibold transition-all ${aspectRatio === "1:1" ? "bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37]" : "bg-[#121218] border border-white/5 text-white hover:bg-white/[0.04]"}`}>1:1</button>
               </div>
             </div>
 
             <div className="flex flex-col gap-3">
               <label className="text-[13px] text-[#A1A1A6] font-medium">Quality</label>
-              <div className="flex bg-[#0B0B0F] border border-white/5 rounded-lg p-1">
+              <div className="flex bg-[#121218] border border-white/5 rounded-lg p-1">
                 <button 
                   onClick={() => setResolution("HD")}
-                  className={`flex-1 py-1.5 text-xs font-semibold rounded-md transition-all ${resolution === 'HD' ? 'bg-[#121218] border border-[#D4AF37] text-[#D4AF37] shadow-[0_0_10px_rgba(212,175,55,0.2)]' : 'text-[#A1A1A6] hover:text-white border border-transparent'}`}
+                  className={`flex-1 py-1.5 text-xs font-semibold rounded-md transition-all ${resolution === 'HD' ? 'bg-[#1C1C1F] border border-[#D4AF37] text-[#D4AF37] shadow-[0_0_10px_rgba(212,175,55,0.2)]' : 'text-[#A1A1A6] hover:text-white border border-transparent'}`}
                 >HD</button>
                 <button 
                   onClick={() => setResolution("4K")}
-                  className={`flex-1 py-1.5 text-xs font-semibold rounded-md transition-all ${resolution === '4K' ? 'bg-[#121218] border border-[#D4AF37] text-[#D4AF37] shadow-[0_0_10px_rgba(212,175,55,0.2)]' : 'text-[#A1A1A6] hover:text-white border border-transparent'}`}
+                  className={`flex-1 py-1.5 text-xs font-semibold rounded-md transition-all ${resolution === '4K' ? 'bg-[#1C1C1F] border border-[#D4AF37] text-[#D4AF37] shadow-[0_0_10px_rgba(212,175,55,0.2)]' : 'text-[#A1A1A6] hover:text-white border border-transparent'}`}
                 >Ultra (4K)</button>
               </div>
             </div>
@@ -243,7 +243,7 @@ function GeneratePageContent({ type }: { type: string }) {
                   <span>Duration</span>
                   <span className="text-white">{duration}s</span>
                 </label>
-                <div className="grid grid-cols-4 gap-1.5 bg-[#0B0B0F] border border-white/5 rounded-lg p-1">
+                <div className="grid grid-cols-4 gap-1.5 bg-[#121218] border border-white/5 rounded-lg p-1">
                   {[5, 10, 20, 30].map(d => {
                     const disabled = resolution === '4K' && d === 5;
                     return (
@@ -251,7 +251,7 @@ function GeneratePageContent({ type }: { type: string }) {
                         key={d}
                         onClick={() => setDuration(d as 5|10|20|30)}
                         disabled={disabled}
-                        className={`py-1.5 text-xs font-semibold rounded-md transition-all ${duration === d ? 'bg-[#121218] text-[#D4AF37] border border-[#D4AF37] shadow-[0_0_10px_rgba(212,175,55,0.2)]' : disabled ? 'opacity-20 cursor-not-allowed text-[#A1A1A6] border border-transparent' : 'text-[#A1A1A6] hover:text-white border border-transparent'}`}
+                        className={`py-1.5 text-xs font-semibold rounded-md transition-all ${duration === d ? 'bg-[#1C1C1F] text-[#D4AF37] border border-[#D4AF37] shadow-[0_0_10px_rgba(212,175,55,0.2)]' : disabled ? 'opacity-20 cursor-not-allowed text-[#A1A1A6] border border-transparent' : 'text-[#A1A1A6] hover:text-white border border-transparent'}`}
                       >{d}s</button>
                     )
                   })}
@@ -264,7 +264,7 @@ function GeneratePageContent({ type }: { type: string }) {
                 <span>Motion Value</span>
                 <span className="text-white">{motionValue}</span>
               </label>
-              <input type="range" min="1" max="100" value={motionValue} onChange={(e) => setMotionValue(parseInt(e.target.value))} className="w-full h-1 bg-[#121218] rounded-full appearance-none outline-none accent-[#D4AF37] cursor-pointer" />
+              <input type="range" min="1" max="100" value={motionValue} onChange={(e) => setMotionValue(parseInt(e.target.value))} className="w-full h-1 bg-[#2C2C30] rounded-full appearance-none outline-none accent-[#D4AF37] cursor-pointer" />
             </div>
 
             {type === 'image-to-video' && (
@@ -272,7 +272,7 @@ function GeneratePageContent({ type }: { type: string }) {
                 <label className="text-[13px] text-[#A1A1A6] font-medium">Upload Image</label>
                 <div className="relative">
                   <input type="file" id="img-upload" accept="image/png, image/jpeg, image/webp" className="hidden" onChange={handleImageUpload} />
-                  <label htmlFor="img-upload" className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-white/10 rounded-xl bg-[#0B0B0F] hover:bg-white/5 hover:border-[#D4AF37]/50 transition-colors cursor-pointer group px-4 text-center">
+                  <label htmlFor="img-upload" className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-white/10 rounded-xl bg-[#121218] hover:bg-white/5 hover:border-[#D4AF37]/50 transition-colors cursor-pointer group px-4 text-center">
                     {imagePreview ? (
                       <img src={imagePreview} className="w-full h-full object-cover rounded-lg" alt="Preview" />
                     ) : (
@@ -308,14 +308,14 @@ function GeneratePageContent({ type }: { type: string }) {
                       className={`px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider transition-all ${
                         voiceFilter === cat 
                           ? "bg-[#D4AF37]/15 text-[#D4AF37] border border-[#D4AF37]/40"
-                          : "bg-[#0B0B0F] text-[#6E6E73] border border-white/5 hover:text-white hover:bg-white/[0.04]"
+                          : "bg-[#121218] text-[#6E6E73] border border-white/5 hover:text-white hover:bg-white/[0.04]"
                       }`}
                     >{cat}</button>
                   ))}
                 </div>
 
                 {/* Voice Grid */}
-                <div className="flex flex-col gap-1.5 max-h-[220px] md:max-h-[260px] overflow-y-auto pr-1 custom-scrollbar">
+                <div className="flex flex-col gap-1.5 lg:max-h-[260px] max-h-none overflow-y-visible pr-1 lg:overflow-y-auto lg:custom-scrollbar">
                   {VOICE_OPTIONS
                     .filter(v => voiceFilter === "All" || v.category === voiceFilter)
                     .map(voice => (
@@ -325,7 +325,7 @@ function GeneratePageContent({ type }: { type: string }) {
                       className={`w-full text-left px-3 py-2.5 rounded-xl transition-all duration-200 flex items-center gap-3 group ${
                         selectedVoice === voice.id
                           ? "bg-[#D4AF37]/10 border border-[#D4AF37]/50 shadow-[0_0_12px_rgba(212,175,55,0.15)]"
-                          : "bg-[#0B0B0F]/60 border border-white/5 hover:bg-white/[0.04] hover:border-white/10"
+                          : "bg-[#121218]/60 border border-white/5 hover:bg-white/[0.04] hover:border-white/10"
                       }`}
                     >
                       {/* Voice Avatar */}
@@ -386,17 +386,17 @@ function GeneratePageContent({ type }: { type: string }) {
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
                 disabled={isGenerating}
-                className="w-full h-[100px] md:h-[120px] bg-[#0B0B0F] border border-white/5 rounded-xl text-white text-[14px] p-3 resize-none outline-none font-sans placeholder-[#6E6E73] focus:border-[#D4AF37]/50 focus:shadow-[0_0_15px_rgba(212,175,55,0.1)] transition-all" 
+                className="w-full h-[100px] md:h-[120px] bg-[#121218] border border-white/5 rounded-xl text-white text-[14px] p-3 resize-none outline-none font-sans placeholder-[#6E6E73] focus:border-[#D4AF37]/50 focus:shadow-[0_0_15px_rgba(212,175,55,0.1)] transition-all" 
                 placeholder={`Describe the ${shortType} you want to generate...`}
               ></textarea>
               
                <button 
                   onClick={handleGenerate}
                   disabled={isGenerating || !prompt.trim() || !hasEnoughCredits}
-                  className="w-full mt-2 bg-[#0B0B0F] border border-[#D4AF37] text-white py-3.5 rounded-xl font-bold text-sm transition-all shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_35px_rgba(245,217,122,0.4)] hover:border-[#F5D97A] hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full mt-2 bg-[#D4AF37] border border-[#D4AF37] text-[#0B0B0F] py-3.5 rounded-xl font-bold text-sm transition-all shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_35px_rgba(245,217,122,0.4)] hover:bg-[#F5D97A] hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {isGenerating ? "Synthesizing..." : resultData ? "Regenerate" : "Generate"}
-                  {!isGenerating && <span className="text-[11px] bg-white/10 px-1.5 py-0.5 rounded opacity-90 border border-[#D4AF37]/30">{cost} credits</span>}
+                  {!isGenerating && <span className="text-[11px] bg-black/10 px-1.5 py-0.5 rounded opacity-90 border border-black/10">{cost} credits</span>}
                 </button>
             </div>
             {/* End Moved Layout Block */}
@@ -404,24 +404,24 @@ function GeneratePageContent({ type }: { type: string }) {
           </div>
         </aside>
 
-        <main className="flex-1 flex flex-col bg-transparent min-h-0 w-full overflow-hidden">
-          <header className="h-16 border-b border-white/5 flex justify-between items-center px-4 md:px-6 bg-[#0B0B0F]/80 backdrop-blur-md gap-2 md:gap-4 shrink-0 overflow-hidden">
-            <div className="flex items-center gap-2 md:gap-4 shrink-0 min-w-0">
-              <button onClick={() => router.back()} className="text-[#A1A1A6] hover:text-white transition-colors flex items-center justify-center w-8 h-8 rounded-lg hover:bg-white/5 shrink-0">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+        <main className="flex-1 flex flex-col min-h-[45vh] lg:min-h-0 w-full overflow-hidden shrink-0 border-b border-white/5 lg:border-none">
+          <header className="h-[60px] md:h-16 border-b border-white/5 flex justify-between items-center px-3 md:px-6 bg-[#0B0B0F] md:bg-[#0B0B0F]/80 md:backdrop-blur-md gap-2 shrink-0 overflow-hidden w-full relative z-20">
+            <div className="flex items-center gap-1 md:gap-4 shrink overflow-hidden">
+              <button onClick={() => router.back()} className="text-[#A1A1A6] hover:text-white transition-colors flex items-center justify-center w-8 h-8 rounded-lg md:hover:bg-white/5 shrink-0">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
               </button>
-              <h2 className="text-sm md:text-lg font-semibold whitespace-nowrap truncate shrink-0">{title}</h2>
+              <h2 className="text-[15px] md:text-lg font-semibold whitespace-nowrap truncate shrink min-w-0 pr-2">{title}</h2>
             </div>
-            <div className="flex items-center gap-2 md:gap-4 text-xs md:text-sm text-[#A1A1A6] shrink-0">
-              <span className={`bg-white/5 px-2 md:px-3 py-1 rounded-lg border border-white/10 shrink-0 ${!hasEnoughCredits ? 'text-red-400 border-red-500/30' : ''}`}>
+            <div className="flex items-center gap-1.5 md:gap-4 text-xs md:text-sm text-[#A1A1A6] shrink-0">
+              <div className={`flex flex-col md:flex-row md:items-center bg-white/5 px-1.5 py-1 md:px-3 md:py-1 rounded-lg border border-white/10 shrink-0 ${!hasEnoughCredits ? 'text-red-400 border-red-500/30' : ''}`}>
                 <span className="hidden sm:inline">{user?.dailyFreeCredits} Free, {user?.credits} Std</span>
-                <span className="sm:hidden">{user?.credits + user?.dailyFreeCredits} Cr</span>
-              </span>
-              <button onClick={() => router.push('/pricing')} className="bg-white/[0.03] border border-white/10 px-2 md:px-4 py-1.5 rounded-lg text-white hover:bg-white/[0.08] transition-colors shrink-0">Upgrade</button>
+                <span className="sm:hidden text-[10px] font-bold whitespace-nowrap">{user?.credits + user?.dailyFreeCredits} Cr</span>
+              </div>
+              <button onClick={() => router.push('/pricing')} className="bg-[#D4AF37]/10 text-[#D4AF37] font-semibold border border-[#D4AF37]/30 px-2.5 py-1.5 md:px-4 md:py-1.5 rounded-lg hover:bg-[#D4AF37]/20 transition-colors shrink-0 whitespace-nowrap text-xs md:text-sm">Upgrade</button>
             </div>
           </header>
 
-          <div className="flex-1 flex flex-col p-4 md:p-6 gap-6 min-h-0 relative">
+          <div className="flex-1 flex flex-col p-4 md:p-6 gap-6 min-h-0 relative bg-[#0B0B0F]">
             <div className="absolute inset-0 bg-gradient-to-br from-[#0B0B0F] to-[#121218] -z-10"></div>
             
             <div className={`flex-1 min-h-0 bg-[#121218]/80 backdrop-blur-3xl border border-white/5 rounded-2xl flex items-center justify-center overflow-hidden relative shadow-[0_10px_40px_rgba(0,0,0,0.8)] mx-auto transition-all duration-500 ease-in-out ${aspectRatio === '16:9' ? 'aspect-video w-full' : aspectRatio === '9:16' ? 'aspect-[9/16] h-full w-auto max-w-full lg:max-w-[360px]' : 'aspect-square h-full w-auto max-w-full lg:max-w-[500px]'}`}>

@@ -45,7 +45,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="desktop-nav items-center gap-10">
+        <nav className="hidden md:flex desktop-nav items-center gap-10">
           {navLinks.map((link) => (
             <Link 
               key={link.path} 
